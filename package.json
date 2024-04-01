@@ -1,0 +1,15 @@
+{
+  "name": "Advance-Video-Chat-App",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Solomon-Danso/Advance-Video-Chat-App.git",
+  "author": "Solomon <solomondanso2023@gmail.com>",
+  "license": "MIT",
+  "scripts":{
+    "start":"node server"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}

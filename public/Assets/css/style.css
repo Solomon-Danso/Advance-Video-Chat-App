@@ -1,0 +1,70 @@
+body{
+    font-family: robot, lato !important;
+    font-size: large;
+}
+
+.logo{
+    height: 43px;
+}
+
+.navbar-brand{
+    font-size: 27px;
+    padding-left: 10px;
+    font-family: "lato";
+
+}
+
+.nav-item a{
+    color:gray !important;
+    font-size: 16px;
+    padding:  16px;
+    font-weight: 600;
+
+}
+
+.display-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+li.nav-item{
+    padding: 0 10px;
+}
+
+.main{
+ padding-top:2rem;
+ /* From https://css.glass */
+background: rgba(255, 255, 255, 0.88);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.2px);
+-webkit-backdrop-filter: blur(17.2px);
+border: 1px solid rgba(255, 255, 255, 1);
+ 
+}
+.signing-image{
+    height:50vh;
+    width:50vw;
+    border: 25px solid, white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px grey;
+
+}
+
+.spacer{
+    padding: 10px
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.bottom{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    padding-top: 2rem;
+}
+
