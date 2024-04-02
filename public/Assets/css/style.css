@@ -42,6 +42,9 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(17.2px);
 -webkit-backdrop-filter: blur(17.2px);
 border: 1px solid rgba(255, 255, 255, 1);
+@media (max-width: 768px) {
+ flex-direction: column;   
+}
  
 }
 .signing-image{
@@ -50,6 +53,13 @@ border: 1px solid rgba(255, 255, 255, 1);
     border: 25px solid, white;
     border-radius: 5px;
     box-shadow: 1px 1px 5px grey;
+
+    background: rgba(255, 255, 255, 0.88);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.2px);
+-webkit-backdrop-filter: blur(17.2px);
+border: 1px solid rgba(255, 255, 255, 1);
 
 }
 
@@ -67,4 +77,97 @@ textarea:focus, input:focus{
     bottom: 0;
     padding-top: 2rem;
 }
+
+.home-wrap{
+    background-color: rgb(31,30,30);
+}
+.g-top{
+    height: 90vh;
+    position: relative;
+}
+.video-wrap{
+    height:600px;
+
+}
+
+.video-wrap>*{
+    flex:1,1,250px;
+    border:1px solid white;
+    background: rgba(255, 255, 255, 0.88);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.2px);
+-webkit-backdrop-filter: blur(17.2px);
+border: 1px solid rgba(255, 255, 255, 1);
+
+}
+
+.g-top-left{
+    position: absolute;
+    right: 0;
+    height: 8vh;
+    top:0;
+    border-bottom-left-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.88);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.2px);
+-webkit-backdrop-filter: blur(17.2px);
+border: 1px solid rgba(255, 255, 255, 1);
+
+}
+
+.top-left-participant-wrap{
+    position: relative;
+}
+.cursor-pointer{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.cursor-pointer:hover{
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(226,225,255);
+    border-radius: 5px;
+}
+
+.top-left-participant-count{
+    position:absolute;
+    top: -3px;
+    right: -10px;
+    font-size: 15px;
+}
+
+
+
+.g-bottom{
+    background: rgba(255, 255, 255, 0.88);
+
+box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.2px);
+-webkit-backdrop-filter: blur(17.2px);
+border: 1px solid rgba(255, 255, 255, 1);
+border-top-left-radius: 16px;
+border-top-right-radius: 16px;
+
+margin: 0 -10px !important;
+padding: 0 20px;
+z-index: 2;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
