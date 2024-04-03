@@ -82,7 +82,7 @@ textarea:focus, input:focus{
     background-color: rgb(31,30,30);
 }
 .g-top{
-    height: 90vh;
+    height: 89vh;
     position: relative;
 }
 .video-wrap{
@@ -151,17 +151,31 @@ border: 1px solid rgba(255, 255, 255, 1);
 border-top-left-radius: 16px;
 border-top-right-radius: 16px;
 
-margin: 0 -10px !important;
 padding: 0 20px;
 z-index: 2;
 
 
 }
 
+.action-icon-style{
+    font-size: 8px !important;
+    height: 40px;
+    width:40px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
 
 
+.bottom-left{
+  position: relative;
+  padding: 5px;
 
+}
 
+.end-call-wrap{
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
 
 
 
