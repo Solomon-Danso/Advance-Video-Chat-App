@@ -1,14 +1,19 @@
 var MyApp = (function(){
 
+    var socket = null;
+    var userId = "";
+    var meetingId = "";
+    var profilePic = "https://glydetek.com/"
 
    function init(uid, mid){
-    
+    userId = uid;
+    meetingId = mid;
+
     event_process_for_signaling_server();
 
    }
 
-   var socket = null;
-
+ 
    function event_process_for_signaling_server(){
 /*
 Explanation:
@@ -34,7 +39,18 @@ Now if the socket is able to receive the connect event then it will alert()
     socket = io.connect();
     
     socket.on("connect",()=>{
-        alert("Socket connected to client side");
+
+        if(socket.connected){
+            if(userId !="" && meetingId !=""){
+                socket.emit("userconnect",{
+                    displayName: userId,
+                    meetingId: meetingId
+
+                })
+            }
+        }
+
+
     })
 
    }

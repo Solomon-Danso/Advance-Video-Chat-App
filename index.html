@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="public/Assets/css/style.css">
 <script src="public/Assets/js/jquery-3.7.1.min.js"></script>
 <script src="public/Assets/js/app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script src="public/Assets/js/socket.io.js"></script>
 
 
 
@@ -17,11 +17,11 @@
     $(function(){
         
         const urlParams = new URLSearchParams(window.location.search);
-        var meeting_id = urlParams.get('meetingID');
-        var user_Id = window.prompt('Enter your userId');
+        var meetingId = urlParams.get('meetingID');
+        var userId = window.prompt('Enter your userId');
        
     
-        if(!user_Id || !meeting_id){
+        if(!userId || !meetingId){
             alert("User Id or meeting ID is required");
             window.location.href = "/action.html";
             return;
@@ -29,7 +29,7 @@
         $('#meetingContainer').show();
        
 
-        MyApp._init(user_Id, meeting_id);
+        MyApp._init(userId, meetingId);
     });
     </script>
     

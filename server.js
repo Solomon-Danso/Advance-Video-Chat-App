@@ -3,23 +3,25 @@ const path = require('path');
 
 var app = express();
 
-var server = app.listen(3000,()=>{
-    console.log('listening on', 3000)
+var server = app.listen(3000, () => {
+    console.log('listening on', 3000);
 });
 
-
-const io = require('socket.io')(server,{
-    allowEIO3 : true
+const io = require('socket.io')(server, {
+    allowEIO3: true
 });
 
-app.use(express.static(path.join(__dirname, "")))
+app.use(express.static(path.join(__dirname, "")));
 
-//The frontend will triger the connection event and the backend will connect to the connection event 
+// Serve action.html when the root URL is accessed
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'action.html'));
+});
 
-io.on("connection",(socket)=>{
-
-console.log("Socket Id is "+socket.id)
-
-})
-
-
+// Handle Socket.IO connections
+io.on("connection", (socket) => {
+    socket.on("userconnect", (data) => {
+        console.log("UserId: " + data.displayName + " MeetingId: " + data.meetingId);
+    });
+    console.log("Socket Id is " + socket.id);
+});
